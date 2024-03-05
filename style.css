@@ -98,8 +98,11 @@ p {
 }
 
 img {
-  overflow: hidden;
   border-radius: 8px 8px 0 0;
+}
+
+.image-desktop {
+  display: none;
 }
 
 .card {
@@ -140,4 +143,50 @@ button {
   border-radius: 8px;
   min-width: 295px;
   height: 3rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+@media (min-width: 750px) {
+
+  main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 100%;
+  }
+
+  section {
+    height: 450px;
+    width: 300px;
+  }
+
+  img {
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+  }
+
+  .image-mobile {
+    display: none;
+  }
+
+  .image-desktop {
+    display: block;
+  }
+
+  .card {
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  button {
+    min-width: 236px;
+  }
+
+  button:hover {
+    background-color: hsl(157, 43%, 18%);
+  }
 }
